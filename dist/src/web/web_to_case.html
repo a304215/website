@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web to Case</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../bundle_base.js"></script>
+    <script>
+        $(function () {
+            $('.datepicker').datepicker({
+                format: "yyyy/mm/dd",
+                todayBtn: true,
+                todayHighlight: true
+            });
+        });
+    </script>
+</head>
+
+<body class="web-to-case">
+    <main class="container">
+        <section class="heading">
+            <div class="title-block">
+                <h1 class="title">台灣虎航</h1>
+                <h2 class="sub-title">自助服務</h2>
+            </div>
+            <!-- <img src="../img/web-to-case01.svg" alt="travel girls" class="heading-image"> -->
+            <img src="../img/web-to-case03.png" alt="travel girls" class="heading-image">
+
+        </section>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="tab-btn active" data-toggle="pill" href="#documentApply">証明文件申請</a>
+            </li>
+            <li class="nav-item">
+                <a class="tab-btn" data-toggle="pill" href="#specialLuggage">特殊行李托運(不含樂器)</a>
+            </li>
+            <li class="nav-item">
+                <a class="tab-btn" data-toggle="pill" href="#upload">檔案上傳</a>
+            </li>
+            <li class="nav-item">
+                <a class="tab-btn" data-toggle="pill" href="#changeTravelerName">已購票旅客姓名變更</a>
+            </li>
+            <li class="nav-item">
+                <a class="tab-btn" data-toggle="pill" href="#tigerClubEdit">TigerClub會員資料變更</a>
+            </li>
+            <li class="nav-item">
+                <a class="tab-btn" data-toggle="pill" href="#specialService">特殊服務申請</a>
+            </li>
+        </ul>
+        <section class="tab-content">
+            <div class="tab-pane fade show active" id="documentApply">
+                <p class="info-text mt-3">
+                    您可透由此功能申請航班異動證明，但以下情況除外：<br>
+                    臨時性異動原因各異，與原定航班時間一小時以內之異動皆屬正常調度，本公司無提供異動證明<br>
+                    計畫性異動(距航班起飛日3天以前進行之調動)，本公司無提供異動證明<br>
+                    以申請日起，2個月以前(含)之異動證明，本公司將無法提供<br>
+                    1.以下所有欄位皆必填，<br>
+                    2.提交申請完成後，我們至多將於5個工作天完成作業，您亦可告知「案件序號」來電客服中心追蹤<br>
+                    3.每張案件申請序號僅能申請兩個航班，超過請分案申請<br>
+                    4.證明資料將寄送至申請人電子信箱，請確認正確填寫
+                </p>
+                <form action="" class="form">
+                    <div class="form-group">
+                        <label class="form-title">申請人姓名</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-title">申請人電話</label>
+                        <div class="row">
+                            <div class="col-lg-3 col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">國碼</span>
+                                    </div>
+                                    <input type="tel" class="form-control" maxlength="6">
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-6">
+                                <input type="tel" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-title">申請人電子信箱</label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <hr class="divider">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                            <h3 class="group-title">申請航班一</h3>
+                            <div class="form-group">
+                                <label class="form-title">航班日期</label>
+                                <input type="text" class="form-control datepicker">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">航班編號/航點(例：IT200/台北東京)</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <h3 class="group-title">申請航班二</h3>
+                            <div class="form-group">
+                                <label class="form-title">航班日期</label>
+                                <input type="text" class="form-control datepicker">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">航班編號/航點(例：IT200/台北東京)</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submit-block">
+                        <button class="btn-submit">確認送出申請</button>
+                        <p class="success-text">您的提交已完成，後續將 Email給您案件序號以供追蹤。</p>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="specialLuggage">
+                <p class="info-text mt-3">
+                    台灣虎航可接受之一般託運行李的尺寸必須為單件重量不超過30公斤，總尺寸203公分以內，任何一邊的高度都不能超過120公分，若超出以上尺寸則定義為大型行李。由於飛機貨櫃艙內的空間有限，如託運行李任何一邊超過200公分,
+                    請測量尺寸後，接續填寫以下所有必填欄位後，提交客服中心確認。<br>
+                    1.皆需計入託運行李重量限額，請自行購買足夠額度<br>
+                    2.請自行測量包裝後之三邊尺寸與重量及數量<br>
+                    3.提交申請完成後，我們至多將於5個工作天完成作業，您亦可告知 「案件序號」 來電客服中心追蹤
+                </p>
+                <p class="info-text">
+                    若託運運動器材，必須符合以下相關規定：<br>
+                    可視為託運行李之運動器材：<br>
+                    高爾夫球具：包含球桿、高爾夫球、雨傘及球鞋，必須妥善包裝並放入具保護裝置之容器內。<br>
+                    自行車：必須妥善包裝於保護裝置的箱盒或自行車袋內。每一位旅客僅允許託運一件 (箱/盒)
+                    自行車。車輪胎必須完全放氣；手柄必須置放與車架平行；踏板必須可拆卸並置放與車架平行；自行車齒輪部位必須有保護裝置包裹。<br>
+                    釣魚器材：釣魚竿與釣魚竿捲軸需包裝於硬盒當中，釣魚靴、釣魚箱和落地蚊帳請妥善包裝於保護性包裝 (袋) 內。<br>
+                    潛水/浮潛設備：每一位旅客僅可以託運一件潛水設備，氧氣瓶必須淨空 (氣瓶之壓力表必須歸零)；儲罐氣閥必須開啟；刺槍與魚叉必須拆卸並分別以保護裝置妥善包裝；<br>
+                    潛水燈需要提前提出申請並得到航空公司批准。台灣虎航強烈建議旅客先與潛水燈製造商確認其 (鋰) 電池品牌與規格。若潛水燈被批准運輸，潛水燈的燈泡與保險絲與 (鋰)
+                    電池都必須先從卸除並分別包裝，(鋰) 電池必須手提。<br>
+                    衝浪板、滑雪板與滑雪橇：所有板類運動器材必須以保護裝置妥善包裝，並且含翅翼部分請盡可能先從板上移除，以保護您的板類運動器材免於損壞。
+                </p>
+                <form action="" class="form">
+                    <div class="form-group">
+                        <label class="form-title">訂位代號</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-title">申請人姓名(需為搭乘旅客)</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-title">申請人電話</label>
+                        <div class="row">
+                            <div class="col-lg-3 col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">國碼</span>
+                                    </div>
+                                    <input type="tel" class="form-control" maxlength="6">
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-6">
+                                <input type="tel" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-title">申請人電子信箱</label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-title">託運物品類別</label>
+                        <select name="" id="" class="form-control">
+                            <option value="">運動器材</option>
+                            <option value="">大尺寸物品</option>
+                            <option value="">其它(非樂器)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-title">託運物品名稱</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-title">託運物品數量</label>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-title">託運物品尺寸(包裝後)</label>
+                        <div class="form-row">
+                            <div class="col-lg-4 col-sm-12 multi">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">長</span>
+                                    </div>
+                                    <input type="text" class="form-control">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">公分</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 multi">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">寬</span>
+                                    </div>
+                                    <input type="text" class="form-control">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">公分</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 multi">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">高</span>
+                                    </div>
+                                    <input type="text" class="form-control">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">公分</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-title">託運物品重量(包裝後)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                            <div class="input-group-append">
+                                <span class="input-group-text">公斤</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-title">特殊說明</label>
+                        <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                    <hr class="divider">
+                    <h3 class="group-title">文件上傳</h3>
+                    <div class="form-group">
+                        <label class="file-title">規格書上傳</label>
+                        <input type="file" class="form-control-file" id="uploadBtn">
+                    </div>
+                    <p class="upload-limit">每張案件申請序號僅能上傳5個檔案，每個檔案大小為2MB，請自行調整原稿，以免操作失敗</p>
+                    <div class="submit-block">
+                        <button class="btn-submit">確認送出申請</button>
+                        <p class="success-text">您的提交已完成，後續將 Email給您案件序號以供追蹤。</p>
+                    </div>
+                </form>
+
+            </div>
+            <div class="tab-pane fade" id="upload">
+                <p class="info-text mt-3">
+                    您可透由此功能補充上傳已申請案件相關資料檔案<br>
+                    1.每張申請序號僅能上傳5個檔案，每個檔案大小限制為 XXXX，請自行調整原稿，以免操作失敗<br>
+                    2.以下所有欄位皆必填<br>
+                    3.提交申請完成後，我們至多將於5個工作天完成作業，您亦可告知「案件序號」來電客服中心追蹤
+                </p>
+                <form action="" class="form">
+                    <div class="form-group">
+                        <label class="form-title">案件序號</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <hr class="divider">
+                    <h3 class="group-title">文件上傳</h3>
+                    <div class="form-group">
+                        <label class="file-title">請自填資料名稱, 如: 護照影本-姓名</label>
+                        <input type="file" class="form-control-file" id="uploadBtn">
+                        <label class="file-title">請自填資料名稱, 如: 醫療證明-姓名</label>
+                        <input type="file" class="form-control-file" id="uploadBtn">
+                        <label class="file-title">請自填資料名稱, 如: 畫面截圖</label>
+                        <input type="file" class="form-control-file" id="uploadBtn">
+                        <label class="file-title">請自填資料名稱</label>
+                        <input type="file" class="form-control-file" id="uploadBtn">
+                        <label class="file-title">請自填資料名稱</label>
+                        <input type="file" class="form-control-file" id="uploadBtn">
+                    </div>
+                    <p class="upload-limit">每張案件申請序號僅能上傳5個檔案，每個檔案大小為2MB，請自行調整原稿，以免操作失敗</p>
+                    <div class="submit-block">
+                        <button class="btn-submit">確認送出申請</button>
+                        <p class="success-text">您的提交已完成，後續將 Email給您案件序號以供追蹤。</p>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="changeTravelerName">
+                <ul class="nav nav-pills sub-nav-tab">
+                    <li class="nav-item">
+                        <a class="sub-tab-btn active" data-toggle="pill" href="#tranferTicket">轉讓他人</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="sub-tab-btn" data-toggle="pill" href="#editOwnName">本人姓名修正</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="sub-tab-btn" data-toggle="pill" href="#editOwnNameFree">本人姓名免費修正</a>
+                    </li>
+                </ul>
+                <div class="tab-content sub-tab-content">
+                    <div class="tab-pane fade show active" id="tranferTicket">
+                        <p class="info-text">
+                            台灣虎航機票無退款規定，但可變更搭乘者姓名。<br>
+                            但不接受部分使用或放棄航段的旅客進行姓名更改。例如您購買來回票，不能只更改回程旅客姓名。<br>
+                            必須透由客服中心辦理且需於訂單中第一段航班起飛4小時以前完成；或親臨機場票務櫃台辦理。
+                        </p>
+                        <p class="info-text">更改姓名定義如下：<br>
+                            需收取更改姓名手續費，且需補票差<br>
+                            IT6610 / IT6611航班應於航班起飛日2天以前透過客服中心完成變更。<br></p>
+                        <p class="info-text">流程如下：<br>
+                            1. 請簽名填寫"更改作業同意書" (可按 <a href="https://www.tigerairtw.com/images/NameChange_tw.pdf"
+                                class="link">這裡</a> 下載表格)<br>
+                            2.接續填寫以下所有必填欄位後，連同上述申請書一併提交申請<br>
+                            3.申請人若非搭乘者本人且搭乘者為未成年者，則需額外提供監護關係證明文件供查核<br>
+                            4.提交申請完成後，我們至多將於5個工作天完成作業，您亦可告知「案件序號」來電客服中心追蹤<br>
+                            5.每張案件申請序號僅能上傳5個檔案，每個檔案大小為2MB，請自行調整原稿，以免操作失敗<br>
+                        </p>
+                        <form action="" class="form">
+                            <div class="form-group">
+                                <label class="form-title">訂位代號</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <hr class="divider">
+                            <div class="form-group">
+                                <label class="form-title">轉讓人姓名
+                                    (需為原搭乘旅客之英文拼音)</label>
+                                <div class="form-row">
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">姓氏</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">名字</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">轉讓人電話</label>
+                                <div class="row">
+                                    <div class="col-lg-3 col-6">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">國碼</span>
+                                            </div>
+                                            <input type="tel" class="form-control" maxlength="6">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-6">
+                                        <input type="tel" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">轉讓人電子信箱</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <hr class="divider">
+                            <div class="form-group">
+                                <label class="form-title">受讓人姓名
+                                    (護照英文拼音)</label>
+                                <div class="form-row">
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">姓氏</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">名字</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="divider">
+                            <h3 class="group-title">文件上傳</h3>
+                            <div class="form-group">
+                                <label class="file-title">更改作業同意書</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                                <label class="file-title">轉讓人護照影本</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                                <label class="file-title">受讓人護照影本</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                            </div>
+                            <p class="upload-limit">每張案件申請序號僅能上傳5個檔案，每個檔案大小為2MB，請自行調整原稿，以免操作失敗</p>
+                            <div class="submit-block">
+                                <button class="btn-submit">確認送出申請</button>
+                                <p class="success-text">您的提交已完成，後續將 Email給您案件序號以供追蹤。</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="editOwnName">
+                        <p class="info-text">
+                            台灣虎航機票無退款規定，但可變更搭乘者姓名。<br>
+                            但不接受部分使用或放棄航段的旅客進行姓名更改。例如您購買來回票，不能只更改回程旅客姓名。<br>
+                            必須透由客服中心辦理且需於訂單中第一段航班起飛4小時以前完成；或親臨機場票務櫃台辦理。<br>
+                        </p>
+                        <p class="info-text">
+                            修正姓名定義如下:<br>
+                            需收取修正姓名手續費，無需補票差<br>
+                            僅限於乘客本人，且須提供護照影本查核。修正時經核對其資料(如護照號碼、護照期限、生日等資料皆和原訂位紀錄相同)可判別為乘客本人時適用。<br>
+                            IT6610 / IT6611航班應於航班起飛日2天以前透過客服中心完成變更。
+                        </p>
+                        <p class="info-text">
+                            若有改名之特殊事項或誤植等情況，本公司可適時協助，流程如下：<br>
+                            1. 請簽名填寫"更改作業同意書" (可按 <a href="https://www.tigerairtw.com/images/NameChange_tw.pdf"
+                                class="link">這裡</a> 下載表格)<br>
+                            2.接續填寫以下所有必填欄位後，連同上述申請書一併提交申請<br>
+                            3.搭乘者本人若為未成年者可由監護人代理申請，但需額外提供監護關係證明文件供查核<br>
+                            4.提交申請完成後，我們至多將於5個工作天完成作業，您亦可告知「案件序號」來電客服中心追蹤<br>
+                            5.每張案件申請序號僅能上傳5個檔案，每個檔案大小為2MB，請自行調整原稿，以免操作失敗
+                        </p>
+                        <form action="" class="form">
+                            <div class="form-group">
+                                <label class="form-title">訂位代號</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人姓名</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電話</label>
+                                <div class="row">
+                                    <div class="col-lg-3 col-6">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">國碼</span>
+                                            </div>
+                                            <input type="tel" class="form-control" maxlength="6">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-6">
+                                        <input type="tel" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電子信箱</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">變更原因</label>
+                                <input type="mail" class="form-control" value="微小錯誤修正">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-title">正確姓名英文拼音</label>
+                                <div class="form-row">
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">姓氏</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">名字</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="divider">
+                            <h3 class="group-title">文件上傳</h3>
+                            <div class="form-group">
+                                <label class="file-title">更改作業同意書</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                                <label class="file-title">護照影本</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                                <label class="file-title">其它身份證明文件</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                            </div>
+                            <p class="upload-limit">每張案件申請序號僅能上傳5個檔案，每個檔案大小為2MB，請自行調整原稿，以免操作失敗</p>
+                            <div class="submit-block">
+                                <button class="btn-submit">確認送出申請</button>
+                                <p class="success-text">您的提交已完成，後續將 Email給您案件序號以供追蹤。</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="editOwnNameFree">
+                        <p class="info-text">
+                            台灣虎航機票無退款規定，但可變更搭乘者姓名。<br>
+                            但不接受部分使用或放棄航段的旅客進行姓名更改。例如您購買來回票，不能只更改回程旅客姓名。<br>
+                            必須透由客服中心辦理且需於訂單中第一段航班起飛4小時以前完成；或親臨機場票務櫃台辦理。<br>
+                        </p>
+                        <p class="info-text">
+                            修正姓名定義如下:<br>
+                            需收取修正姓名手續費，無需補票差<br>
+                            僅限於乘客本人，且須提供護照影本查核。修正時經核對其資料(如護照號碼、護照期限、生日等資料皆和原訂位紀錄相同)可判別為乘客本人時適用。<br>
+                            IT6610 / IT6611航班應於航班起飛日2天以前透過客服中心完成變更。
+                        </p>
+                        <p class="info-text">
+                            若有改名之特殊事項或誤植等情況，本公司可適時協助，流程如下：<br>
+                            1. 請簽名填寫"更改作業同意書" (可按 <a href="https://www.tigerairtw.com/images/NameChange_tw.pdf"
+                                class="link">這裡</a> 下載表格)<br>
+                            2.接續填寫以下所有必填欄位後，連同上述申請書一併提交申請<br>
+                            3.搭乘者本人若為未成年者可由監護人代理申請，但需額外提供監護關係證明文件供查核<br>
+                            4.提交申請完成後，我們至多將於5個工作天完成作業，您亦可告知「案件序號」來電客服中心追蹤<br>
+                            5.每張案件申請序號僅能上傳5個檔案，每個檔案大小為2MB，請自行調整原稿，以免操作失敗
+                        </p>
+                        <form action="" class="form">
+                            <div class="form-group">
+                                <label class="form-title">訂位代號</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人姓名</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電話</label>
+                                <div class="row">
+                                    <div class="col-lg-3 col-6">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">國碼</span>
+                                            </div>
+                                            <input type="tel" class="form-control" maxlength="6">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-6">
+                                        <input type="tel" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電子信箱</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">變更原因</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="">姓名欄位顛倒</option>
+                                    <option value="">冠夫姓修正</option>
+                                    <option value="">2個字母內修正</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-title">正確姓名英文拼音</label>
+                                <div class="form-row">
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">姓氏</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">名字</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="divider">
+                            <h3 class="group-title">文件上傳</h3>
+                            <div class="form-group">
+                                <label class="file-title">更改作業同意書</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                                <label class="file-title">護照影本</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                                <label class="file-title">其它身份證明文件</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                            </div>
+                            <p class="upload-limit">每張案件申請序號僅能上傳5個檔案，每個檔案大小為2MB，請自行調整原稿，以免操作失敗</p>
+                            <div class="submit-block">
+                                <button class="btn-submit">確認送出申請</button>
+                                <p class="success-text">您的提交已完成，後續將 Email給您案件序號以供追蹤。</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="tab-pane fade" id="tigerClubEdit">
+                <ul class="nav nav-pills sub-nav-tab">
+                    <li class="nav-item">
+                        <a class="sub-tab-btn active" data-toggle="pill" href="#editData">資料變更</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="sub-tab-btn" data-toggle="pill" href="#deleteMembership">會籍註銷</a>
+                    </li>
+                </ul>
+                <div class="tab-content sub-tab-content">
+                    <div class="tab-pane fade show active" id="editData">
+                        <p class="info-text">
+                            可自行於會員系統中修改之欄位為：會員國籍、護照號碼、護照有效日期、聯絡email。<br>
+                            不可於會員系統中修改之欄位：會員稱謂、姓名、生日，以上欄位請務必於註冊時確實填寫，一經提交即無法進行任何變更，任何變更即視為非會員本人。<br>
+                            若有改名之特殊事項或誤植等情況，本公司可適時協助，流程如下：<br>
+                        </p>
+                        <p class="info-text">
+                            1. 請簽名填寫"Tigerclub 會員資料修改/退出申請書" (可按<a
+                                href="https://www.tigerairtw.com/images/member_change_Chinese.pdf"
+                                class="link">這裡</a>下載表格)<br>
+                            2.接續填寫以下所有必填欄位後，連同上述申請書一併提交申請<br>
+                            3.申請人若非會員本人，則需額外提供關係證明文件供查核<br>
+                            4.提交申請完成後，我們至多將於5個工作天完成作業，您亦可告知「案件序號」來電客服中心追蹤<br>
+                            5.每張案件申請序號僅能上傳5個檔案，每個檔案大小為2MB，請自行調整原稿，以免操作失敗
+                        </p>
+                        <form action="" class="form">
+                            <div class="form-group">
+                                <label class="form-title">申請人姓名</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電話</label>
+                                <div class="row">
+                                    <div class="col-lg-3 col-6">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">國碼</span>
+                                            </div>
+                                            <input type="tel" class="form-control" maxlength="6">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-6">
+                                        <input type="tel" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電子信箱</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人與會員關係(若為親屬請另提供關係證明資料)</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">會員帳號</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">修改項目</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="">姓名拼音</option>
+                                    <option value="">出生年月日</option>
+                                    <option value="">稱謂(性別)</option>
+                                </select>
+                            </div>
+                            <hr class="divider">
+                            <h3 class="group-title">文件上傳</h3>
+                            <div class="form-group">
+                                <input type="file" class="form-control-file">
+                                <input type="file" class="form-control-file">
+                                <input type="file" class="form-control-file">
+                                <input type="file" class="form-control-file">
+                                <input type="file" class="form-control-file">
+                            </div>
+                            <div class="submit-block">
+                                <button class="btn-submit">確認送出申請</button>
+                                <p class="success-text">您的提交已完成，後續將 Email給您案件序號以供追蹤。</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="deleteMembership">
+                        <p class="info-text">
+                            申請退出會員資格，重要提醒：<br>
+                            *會員退出申請書一經提交，剩餘會員回饋金將會失效不得再使用。<br>
+                            *已退出會員資格之會員帳號(電子信箱) 亦不得以任何方式再次重新申請。流程如下：<br>
+                        </p>
+                        <a class="info-text">
+                            1. 請簽名填寫"Tigerclub 會員資料修改/退出申請書" (可按<a class="link"
+                                href="https://www.tigerairtw.com/images/member_change_Chinese.pdf">這裡</a>下載表格) <br>
+                            2.接續填寫以下所有必填欄位後，連同上述申請書一併提交申請<br>
+                            3.申請人若非會員本人，則需額外提供關係證明文件供查核<br>
+                            4.提交申請完成後，我們至多將於5個工作天完成作業，您亦可告知「案件序號」來電客服中心追蹤<br>
+                            5.每張案件申請序號僅能上傳5個檔案，每個檔案大小為2MB，請自行調整原稿，以免操作失敗
+                            </p>
+                            <form action="" class="form">
+                                <div class="form-group">
+                                    <label class="form-title">申請人電子信箱</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-title">申請人與會員關係(若為親屬請另提供關係證明資料)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-title">會員帳號</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <hr class="divider">
+                                <h3 class="group-title">文件上傳</h3>
+                                <div class="form-group">
+                                    <input type="file" class="form-control-file">
+                                    <input type="file" class="form-control-file">
+                                    <input type="file" class="form-control-file">
+                                    <input type="file" class="form-control-file">
+                                    <input type="file" class="form-control-file">
+                                </div>
+                                <div class="submit-block">
+                                    <button class="btn-submit">確認送出申請</button>
+                                    <p class="success-text">您的提交已完成，後續將 Email給您案件序號以供追蹤。</p>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="specialService">
+                <ul class="nav nav-pills sub-nav-tab">
+                    <li class="nav-item">
+                        <a class="sub-tab-btn active" data-toggle="pill" href="#wheelchair">輪椅申請</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="sub-tab-btn" data-toggle="pill" href="#teenSolo">青少年單獨旅行</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="sub-tab-btn" data-toggle="pill" href="#deafTraveler">聽障旅客</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="sub-tab-btn" data-toggle="pill" href="#blindTraveler">視障旅客</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="sub-tab-btn" data-toggle="pill" href="#meetingAirport">機場會晤服務</a>
+                    </li>
+                </ul>
+                <div class="tab-content sub-tab-content">
+                    <div class="tab-pane fade show active" id="wheelchair">
+                        <p class="info-text">
+                            1.申請特殊需求的乘客除了正常的行李額之外，個人攜帶的輪椅必需於報到櫃台辦理可免費託運。<br>
+                            2.電動輪椅之電池必須符合載運規範。 基於職業健康和安全法規之規範，目前任何輪椅超過30公斤都不接受，除非可將其拆解分裝，且總重量30公斤以內。<br>
+                            3.在機場中需要使用輪椅，鈞請於班機起飛至少48小時以前，於此申請聯絡本公司客服人員。<br>
+                            4.已預訂輪椅服務的旅客，抵達機場時請告知本公司服務人員以取得輪椅。旅客也可使用自己的輪椅，前往登機門。<br>
+                            5.使用電動輪椅的旅客應於機場報到時，將電動輪椅交付託運。<br>
+                            6.由於國、內外機場設施及各地法令限制皆有所不同，抵達目的地後，輪椅無法由機坪送上登機口時，本公司將會將您託運的輪椅送至入境行李提領區。
+                        </p>
+                        <p class="info-text">
+                            電動輪椅或輔具託運須知：
+                            如您需託運電動輪椅或輔具，請點<a class="link"
+                                href="https://www.tigerairtw.com/event/special-requirement/WHCH_tw.pdf">這裡</a>參見詳細說明。
+                        </p>
+                        <p class="info-text">
+                            為確保我們的服務能符合您的實際狀況，您必須告知我們：<br>
+                            您能否在沒有任何協助下自行走動？您可行走的距離？以及您能否在沒有任何協助下上下樓梯？您需託運的輪椅尺寸及規格?
+                        </p>
+                        <p class="info-text">
+                            流程如下：<br>
+                            1. 接續填寫以下所有必填欄位後，連同相關需託運之輪椅規格書一併提交申請<br>
+                            2.提交申請完成後，我們至多將於5個工作天完成作業，您亦可告知「案件序號」來電客服中心追蹤<br>
+                            3.每張案件申請序號僅能上傳5個檔案，每個檔案大小為2MB，請自行調整原稿，以免操作失敗
+                        </p>
+                        <form action="" class="form">
+                            <div class="form-group">
+                                <label class="form-title">訂位代號</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人姓名</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電話</label>
+                                <div class="row">
+                                    <div class="col-lg-3 col-6">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">國碼</span>
+                                            </div>
+                                            <input type="tel" class="form-control" maxlength="6">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-6">
+                                        <input type="tel" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電子信箱</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <hr class="divider">
+                            <h3 class="group-title">需求旅客資訊</h3>
+                            <div class="form-group">
+                                <label class="form-title">旅客姓名</label>
+                                <div class="form-row">
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">姓氏</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">名字</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">行動不便原因</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="">受傷</option>
+                                    <option value="">疾病</option>
+                                    <option value="">年長</option>
+                                    <option value="">其它</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">無協助下，能否自行平行走動?</label>
+                                <div class="radio-grp">
+                                    <label class="radio">
+                                        <input type="radio" name="radio1" checked>
+                                        <div class="radio-btn">是</div>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="radio1">
+                                        <div class="radio-btn">否</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">可自行移動距離</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">無協助下，能否自行上下階梯?</label>
+                                <div class="radio-grp">
+                                    <label class="radio">
+                                        <input type="radio" name="radio2" checked>
+                                        <div class="radio-btn">是</div>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="radio2">
+                                        <div class="radio-btn">否</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="divider">
+
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-12">
+                                    <h3 class="group-title">航班資訊一</h3>
+                                    <div class="form-group">
+                                        <label class="form-title">航班日期</label>
+                                        <input type="text" class="form-control datepicker">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">航班編號</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">出發航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">抵達航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <h3 class="group-title">航班資訊二</h3>
+                                    <div class="form-group">
+                                        <label class="form-title">航班日期</label>
+                                        <input type="text" class="form-control datepicker">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">航班編號</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">出發航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">抵達航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="divider">
+                            <h3 class="group-title">是否有同行者</h3>
+                            <div class="form-group">
+                                <label class="form-title">無協助下，能否自行上下階梯?</label>
+                                <div class="radio-grp">
+                                    <label class="radio">
+                                        <input type="radio" name="radio3" checked>
+                                        <div class="radio-btn">是</div>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="radio3">
+                                        <div class="radio-btn">否</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">同行者姓名</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">同行者訂位代號</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <hr class="divider">
+                            <h3 class="group-title">自有輪椅資訊</h3>
+                            <div class="form-group">
+                                <label class="form-title">無協助下，能否自行上下階梯?</label>
+                                <div class="radio-grp">
+                                    <label class="radio">
+                                        <input type="radio" name="radio4" checked>
+                                        <div class="radio-btn">是</div>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="radio4">
+                                        <div class="radio-btn">否</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">自有輪椅數量</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">自有輪椅重量</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">公斤</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">自有輪椅尺寸</label>
+                                <div class="form-row">
+                                    <div class="col-lg-4 col-sm-12 multi">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">長</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">公分</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 multi">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">寬</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">公分</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 multi">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">高</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">公分</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">自有輪椅類型</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="">手動輪椅</option>
+                                    <option value="">電動輪椅</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">電動輪椅品名/型號</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">自有輪椅類型</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="">鋰電池</option>
+                                    <option value="">非溢漏式</option>
+                                    <option value="">溢漏式</option>
+                                    <option value="">其它</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">電池可拆卸與否</label>
+                                <div class="radio-grp">
+                                    <label class="radio">
+                                        <input type="radio" name="radio4" checked>
+                                        <div class="radio-btn">是</div>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="radio4">
+                                        <div class="radio-btn">否</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">電池數量</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">電池功率</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">特殊事項說明</label>
+                                <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                            </div>
+                            <hr class="divider">
+                            <h3 class="group-title">文件上傳</h3>
+                            <div class="form-group">
+                                <label class="file-title">輪椅規格書</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                                <label class="file-title">輪椅示意圖</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                                <label class="file-title">請自填資料名稱</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                                <label class="file-title">請自填資料名稱</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                                <label class="file-title">請自填資料名稱</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                            </div>
+                            <p class="upload-limit">每張案件申請序號僅能上傳5個檔案，每個檔案大小為2MB，請自行調整原稿，以免操作失敗</p>
+                            <div class="submit-block">
+                                <button class="btn-submit">確認送出申請</button>
+                                <p class="success-text">您的提交已完成，後續將 Email給您案件序號以供追蹤。</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="teenSolo">
+                        <p class="info-text">
+                            依據規定，台灣虎航不受理 15 歲以下無人陪伴的單獨旅客登機。<br>
+                            (特別情況：接受 14 歲以下之兒童團體 (如 10 名或 10 名以上)，但每10名兒童至少需要有一名成年人(年滿18歲) 陪同)<br>
+                        </p>
+                        <p class="info-text">
+                            青少年(定義為年滿12歲未滿18歲)<br>
+                            1.父母或監護人需簽署一份免責表格並完整填寫接機人與送機人之個人資訊，台灣虎航始將接受12歲至未滿15歲之間的未成年旅客登機<br>
+                            2.接機人需於目的地出示相關文件方可接取您的未成年旅客。<br>
+                            3.父母親或監護人(或送機之受委託人)必須停留在機場直至該航班起飛。<br>
+                            4.此未成年旅客必須在辦理登機作業前出示所有要求的有效證件。<br>
+                            5.上述規定依據各國有關無人陪伴旅行的兒童之現行法律有所調整。台灣虎航不提供接送及特別設施。<br>
+                        </p>
+                        <p class="info-text">
+                            流程如下：<br>
+                            1. 請簽名填寫"未成年旅客單獨旅行同意書" (可按<a class="link"
+                                href="https://www.tigerairtw.com/images/Letter_of_indemnity_unaccompanied_minors.pdf">這裡</a>下載表格)<br>
+                            2.接續填寫以下所有必填欄位後，連同上述申請書一併提交申請<br>
+                            3.若實際接送機人非此未成年旅客之父母或監護人，則需額外提供關係證明文件與委任書供查核<br>
+                            4.提交申請完成後，我們至多將於5個工作天完成作業，您亦可告知「案件序號」來電客服中心追蹤<br>
+                            5.每張案件申請序號僅能上傳5個檔案，每個檔案大小為2MB，請自行調整原稿，以免操作失敗
+                        </p>
+                        <form action="" class="form">
+                            <div class="form-group">
+                                <label class="form-title">訂位代號</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人姓名</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電話</label>
+                                <div class="row">
+                                    <div class="col-lg-3 col-6">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">國碼</span>
+                                            </div>
+                                            <input type="tel" class="form-control" maxlength="6">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-6">
+                                        <input type="tel" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電子信箱</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <hr class="divider">
+                            <div class="form-group">
+                                <label class="form-title">未成年旅客姓名</label>
+                                <div class="form-row">
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">姓氏</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">名字</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">出發航站</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <hr class="divider">
+                            <div class="form-group">
+                                <label class="form-title">送機人姓名</label>
+                                <div class="form-row">
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">姓氏</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">名字</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">送機人身份</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <hr class="divider">
+                            <div class="form-group">
+                                <label class="form-title">接機航站</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">接機人姓名</label>
+                                <div class="form-row">
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">姓氏</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">名字</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">接機人身份</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <hr class="divider">
+                            <h3 class="group-title">文件上傳</h3>
+                            <div class="form-group">
+                                <label class="file-title">未成年旅客單獨旅行同意書</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                                <label class="file-title">關係證明文件</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                                <label class="file-title">關係證明文件</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                                <label class="file-title">委託書</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                                <label class="file-title">委託書</label>
+                                <input type="file" class="form-control-file" id="uploadBtn">
+                            </div>
+                            <p class="upload-limit">每張案件申請序號僅能上傳5個檔案，每個檔案大小為2MB，請自行調整原稿，以免操作失敗</p>
+                            <div class="submit-block">
+                                <button class="btn-submit">確認送出申請</button>
+                                <p class="success-text">您的提交已完成，後續將 Email給您案件序號以供追蹤。</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="deafTraveler">
+                        <p class="info-text">
+                            台灣虎航將以合理可行並符合本公司政策下，為搭乘台灣虎航班機需要幫助的旅客提供援助。在可用資源限制範圍內，我們將以有尊嚴和非歧視的方式協助旅客的需要。<br>
+                            若航程中需要特別協助，請於預訂前聯絡客服中心確認相關事項。或者，至少必須在您航班出發前5日通知我們，俾本公司妥善安排協助事項。如果未在啟程日前5日通知我們，恐將導致旅客在抵達機場後無法提供相關服務，甚至因特殊狀況被拒絕登機，無法順利成行。<br>
+                        </p>
+                        <p class="info-tex">
+                            有特殊要求旅客在被接受登機之前需可配合以下事項方可單獨旅行：<br>
+                            能夠自行管理藥物無需幫助、能夠自行吃喝無需援助、能夠自行上廁所無需援助<br>
+                            ※ 基於安全考量，台灣虎航每個航班對於特殊需求乘客的數量有所限制，本公司也不能把特殊需求旅客安排在緊急出口座位。<br>
+                            1.請接續填寫以下所有必填欄位後，提交通知<br>
+                            2.提交申請完成後，我們至多將於5個工作天完成作業，您亦可告知「案件序號」來電客服中心追蹤
+                        </p>
+                        <form action="" class="form">
+                            <div class="form-group">
+                                <label class="form-title">申請人電話</label>
+                                <div class="row">
+                                    <div class="col-lg-3 col-6">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">國碼</span>
+                                            </div>
+                                            <input type="tel" class="form-control" maxlength="6">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-6">
+                                        <input type="tel" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電子信箱</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">乘客姓名</label>
+                                <div class="form-row">
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">姓氏</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">名字</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="divider">
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-12">
+                                    <h3 class="group-title">航班資訊一</h3>
+                                    <div class="form-group">
+                                        <label class="form-title">航班日期</label>
+                                        <input type="text" class="form-control datepicker">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">航班編號</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">出發航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">抵達航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <h3 class="group-title">航班資訊二</h3>
+                                    <div class="form-group">
+                                        <label class="form-title">航班日期</label>
+                                        <input type="text" class="form-control datepicker">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">航班編號</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">出發航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">抵達航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="divider">
+                            <div class="form-group">
+                                <label class="form-title">是否有同行者?</label>
+                                <div class="radio-grp">
+                                    <label class="radio">
+                                        <input type="radio" name="radio13" checked>
+                                        <div class="radio-btn">是</div>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="radio13">
+                                        <div class="radio-btn">否</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">同行者姓名</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">同行者訂位代號</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">特殊說明事項</label>
+                                <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                            </div>
+                            <div class="submit-block">
+                                <button class="btn-submit">確認送出申請</button>
+                                <p class="success-text">您的提交已完成，後續將 Email給您案件序號以供追蹤。</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="blindTraveler">
+                        <p class="info-text">
+                            台灣虎航將以合理可行並符合本公司政策下，為搭乘台灣虎航班機需要幫助的旅客提供援助。在可用資源限制範圍內，我們將以有尊嚴和非歧視的方式協助旅客的需要。<br>
+                            若航程中需要特別協助，請於預訂前聯絡客服中心確認相關事項。或者，至少必須在您航班出發前5日通知我們，俾本公司妥善安排協助事項。如果未在啟程日前5日通知我們，恐將導致旅客在抵達機場後無法提供相關服務，甚至因特殊狀況被拒絕登機，無法順利成行。<br>
+                        </p>
+                        <p class="info-text">
+                            有特殊要求旅客在被接受登機之前需可配合以下事項方可單獨旅行：<br>
+                            能夠管理藥物無需幫助、能夠吃喝無需援助、能夠自行上廁所無需援助<br>
+                            如果旅客不符合上述事項，照顧者/旅伴隨行是必需的。照顧者必須至少年滿18歲，若有地面或飛行中的緊急情況發生時能協助旅客與他/她的個人需求。<br>
+                            台灣虎航可盡力提供：需要時協助座位分配、提供個人安全簡報、在航程中協助確認與打開餐飲包裝<br>
+                            於機上另有提供點字版之「座艙配置平面圖」及「安全講解須知」，有需求之乘客可向空服員索取。
+                        </p>
+                        <p class="info-text">
+                            若您有需要導盲犬的陪同時<br>
+                            台灣虎航的國際線航班接受導盲犬陪同登機，但台北至澳門航線，因檢疫問題不受理導盲犬。<br>
+
+                            ※ 基於安全考量，台灣虎航每個航班對於特殊需求乘客的數量有所限制，本公司也不能把特殊需求旅客安排在緊急出口座位。<br>
+
+                            1.請接續填寫以下所有必填欄位後，提交通知<br>
+                            2.提交申請完成後，我們至多將於5個工作天完成作業，您亦可告知「案件序號」來電客服中心追蹤
+                        </p>
+                        <form action="" class="form">
+                            <div class="form-group">
+                                <label class="form-title">訂位代號</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人姓名</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電話</label>
+                                <div class="row">
+                                    <div class="col-lg-3 col-6">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">國碼</span>
+                                            </div>
+                                            <input type="tel" class="form-control" maxlength="6">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-6">
+                                        <input type="tel" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電子信箱</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">需協助旅客姓名</label>
+                                <div class="form-row">
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">姓氏</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">名字</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">需求原因</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="">年長者</option>
+                                    <option value="">不黯語言</option>
+                                    <option value="">其它</option>
+                                </select>
+                            </div>
+                            <hr class="divider">
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-12">
+                                    <h3 class="group-title">航班資訊一</h3>
+                                    <div class="form-group">
+                                        <label class="form-title">航班日期</label>
+                                        <input type="text" class="form-control datepicker">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">航班編號</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <hr class="divider">
+                                    <div class="form-group">
+                                        <label class="form-title">出發航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">需求引導協助</label>
+                                        <div class="radio-grp">
+                                            <label class="radio">
+                                                <input type="radio" name="radio9" checked>
+                                                <div class="radio-btn">是</div>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="radio9">
+                                                <div class="radio-btn">否</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <hr class="divider">
+                                    <div class="form-group">
+                                        <label class="form-title">抵達航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">需求引導協助</label>
+                                        <div class="radio-grp">
+                                            <label class="radio">
+                                                <input type="radio" name="radio10" checked>
+                                                <div class="radio-btn">是</div>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="radio10">
+                                                <div class="radio-btn">否</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <h3 class="group-title">航班資訊二</h3>
+                                    <div class="form-group">
+                                        <label class="form-title">航班日期</label>
+                                        <input type="text" class="form-control datepicker">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">航班編號</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <hr class="divider">
+                                    <div class="form-group">
+                                        <label class="form-title">出發航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">需求引導協助</label>
+                                        <div class="radio-grp">
+                                            <label class="radio">
+                                                <input type="radio" name="radio11" checked>
+                                                <div class="radio-btn">是</div>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="radio11">
+                                                <div class="radio-btn">否</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <hr class="divider">
+                                    <div class="form-group">
+                                        <label class="form-title">抵達航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">需求引導協助</label>
+                                        <div class="radio-grp">
+                                            <label class="radio">
+                                                <input type="radio" name="radio12" checked>
+                                                <div class="radio-btn">是</div>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="radio12">
+                                                <div class="radio-btn">否</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="divider">
+                            <div class="form-group">
+                                <label class="form-title">是否有同行者?</label>
+                                <div class="radio-grp">
+                                    <label class="radio">
+                                        <input type="radio" name="radio13" checked>
+                                        <div class="radio-btn">是</div>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="radio13">
+                                        <div class="radio-btn">否</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">同行者姓名</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">同行者訂位代號</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">特殊說明事項</label>
+                                <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                            </div>
+                            <div class="submit-block">
+                                <button class="btn-submit">確認送出申請</button>
+                                <p class="success-text">您的提交已完成，後續將 Email給您案件序號以供追蹤。</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="meetingAirport">
+                        <p class="info-text">
+                            若遇單獨旅行之成年旅客(年滿18歲),
+                            如:年長者單獨旅行，不黯語言溝通需專人引導協助通關、登機等作業；請於出發日至少五工作天前，向本公司客服中心申請，本公司將於確認所需協助之場站情況後，盡力提供服務。<br>
+                            流程如下：<br>
+                            1. 接續填寫以下所有必填欄位後，提交申請<br>
+                            2.提交申請完成後，我們至多將於5個工作天完成作業，您亦可告知「案件序號」來電客服中心追蹤
+                        </p>
+                        <form action="" class="form">
+                            <div class="form-group">
+                                <label class="form-title">申請人姓名</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電話</label>
+                                <div class="row">
+                                    <div class="col-lg-3 col-6">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">國碼</span>
+                                            </div>
+                                            <input type="tel" class="form-control" maxlength="6">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-6">
+                                        <input type="tel" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">申請人電子信箱</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">需協助旅客姓名</label>
+                                <div class="form-row">
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">姓氏</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto mb-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">名字</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-title">需求原因</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="">年長者</option>
+                                    <option value="">不黯語言</option>
+                                    <option value="">其它</option>
+                                </select>
+                            </div>
+                            <hr class="divider">
+
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-12">
+                                    <h3 class="group-title">航班資訊一</h3>
+                                    <div class="form-group">
+                                        <label class="form-title">航班日期</label>
+                                        <input type="text" class="form-control datepicker">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">航班編號</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <hr class="divider">
+                                    <div class="form-group">
+                                        <label class="form-title">出發航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">需求引導協助</label>
+                                        <div class="radio-grp">
+                                            <label class="radio">
+                                                <input type="radio" name="radio5" checked>
+                                                <div class="radio-btn">是</div>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="radio5">
+                                                <div class="radio-btn">否</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <hr class="divider">
+                                    <div class="form-group">
+                                        <label class="form-title">抵達航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">需求引導協助</label>
+                                        <div class="radio-grp">
+                                            <label class="radio">
+                                                <input type="radio" name="radio6" checked>
+                                                <div class="radio-btn">是</div>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="radio6">
+                                                <div class="radio-btn">否</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <h3 class="group-title">航班資訊二</h3>
+                                    <div class="form-group">
+                                        <label class="form-title">航班日期</label>
+                                        <input type="text" class="form-control datepicker">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">航班編號</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <hr class="divider">
+                                    <div class="form-group">
+                                        <label class="form-title">出發航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">需求引導協助</label>
+                                        <div class="radio-grp">
+                                            <label class="radio">
+                                                <input type="radio" name="radio7" checked>
+                                                <div class="radio-btn">是</div>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="radio7">
+                                                <div class="radio-btn">否</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <hr class="divider">
+                                    <div class="form-group">
+                                        <label class="form-title">抵達航站</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-title">需求引導協助</label>
+                                        <div class="radio-grp">
+                                            <label class="radio">
+                                                <input type="radio" name="radio8" checked>
+                                                <div class="radio-btn">是</div>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="radio8">
+                                                <div class="radio-btn">否</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="divider">
+                            <div class="form-group">
+                                <label class="form-title">特殊說明事項</label>
+                                <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                            </div>
+                            <div class="submit-block">
+                                <button class="btn-submit">確認送出申請</button>
+                                <p class="success-text">您的提交已完成，後續將 Email給您案件序號以供追蹤。</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

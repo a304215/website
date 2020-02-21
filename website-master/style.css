@@ -1,0 +1,41 @@
+html{
+    height: 100%;
+}
+body{
+    background-image: url(image/back_ground.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+div{
+    margin: 20px;
+}
+label{
+    margin-right: 20px;
+    font-size: 30px;
+}
+.text_input{
+    border-radius: 10px;
+    height: 30px;
+    width: 200px;
+}
+.form-div{
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.input_box{
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+}
+.submit_button{
+    height: 30px;
+}
+.find_passwd{
+    justify-content: center;
+    display: flex;
+}

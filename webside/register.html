@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>請選擇</title>
+        <style>
+            html{
+                height: 100%;
+            }
+            body{
+                background-image: url(image/homepage.jpeg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                background-size: cover;
+            }
+        </style>
+        <link rel = "stylesheet" href="choice_side.css">
+    </head>
+    <body>
+        <form action = "check_number.php" method = "post">
+            <div class = "main_class">
+                <div class="inputbox">
+                    請輸入註冊帳號:<input type = "text" name = "rigister_number" style="width:200px;height:30px;font-size: 20px;" pattern="[a-zA-Z0-9]{6}"> 
+                </div>
+                <br>
+                <br>
+                <div class="inputbox">
+                    請輸入註冊密碼:<input type = "text" name = "rigister_passwd" style="width:200px;height:30px;font-size: 20px;" pattern="[a-zA-Z0-9]{6}">
+                </div>
+                <br>
+                <br>
+                <div class="inputbox">
+                    確認密碼:<input type = "text" name = "check_passwd" style = "width:250px;height:30px;font-size: 20px;" pattern="[a-zA-Z0-9]{6}">
+                </div>
+                <br>
+                <br>
+                <div class = "button">
+                    <input type = "submit" value="註冊" style="width : 200px;height:30px;font-size:20px;">
+                </div>
+            </div>
+        </form>
+    </body>
+</html> 

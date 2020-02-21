@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chatbot Q&A</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../bundle_base.js"></script>
+
+    <!-- Chatbutton  -->
+
+    <style type='text/css'>
+        .embeddedServiceHelpButton .helpButton .uiButton {
+            background-color: #005290;
+            font-family: "Microsoft JhengHei", sans-serif;
+        }
+
+        .embeddedServiceHelpButton .helpButton .uiButton:focus {
+            outline: 1px solid #005290;
+        }
+    </style>
+
+    <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+    <script type='text/javascript'>
+        var initESW = function (gslbBaseURL) {
+            embedded_svc.settings.displayHelpButton = true; //Or false
+            embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+            //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+            //embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+
+            //embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+            //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+            // Settings for Chat
+            //embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+            // Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+            // Returns a valid button ID.
+            //};
+            //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+            //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+            //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+            embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+            embedded_svc.settings.entryFeature = 'LiveAgent';
+
+            embedded_svc.init(
+                'https://benqivestest01--demo2.my.salesforce.com',
+                'https://demo2-tigerdemo2.cs57.force.com/livechat',
+                gslbBaseURL,
+                '00D0k0000009Pzx',
+                'ChatBot_v1', {
+                    baseLiveAgentContentURL: 'https://c.la1-c1cs-hnd.salesforceliveagent.com/content',
+                    deploymentId: '5720k00000000Gc',
+                    buttonId: '5730k00000000IE',
+                    baseLiveAgentURL: 'https://d.la1-c1cs-hnd.salesforceliveagent.com/chat',
+                    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I0k0000004CFpEAM_16ea0750a04',
+                    isOfflineSupportEnabled: false
+                }
+            );
+        };
+
+        if (!window.embedded_svc) {
+            var s = document.createElement('script');
+            s.setAttribute('src', 'https://benqivestest01--demo2.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.onload = function () {
+                initESW(null);
+            };
+            document.body.appendChild(s);
+        } else {
+            initESW('https://service.force.com');
+        }
+    </script>
+
+    <!-- Chatbutton END -->
+
+</head>
+
+<body class="chatbot-button">
+    <main class="container">
+        <section class="heading justify-content-start">
+            <div class="title-block">
+                <h1 class="title">台灣虎航</h1>
+                <h2 class="sub-title">九大問題分類導航</h2>
+            </div>
+        </section>
+    </main>
+    <section class="question-card">
+        <div class="row">
+            <div class="cols col-lg-4 col-sm-12">
+                <div class="card">
+                    <h3 class="card-title">熱門資訊</h3>
+                    <div class="questions-list">
+                        <p class="question">台灣虎航購票通路有哪些?</p>
+                        <p class="question">購票官網瀏覽的電腦設定?</p>
+                        <p class="question">台灣虎航顧客服務連絡方式?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cols col-lg-4 col-sm-12">
+                <div class="card">
+                    <h3 class="card-title">訂位購票</h3>
+                    <div class="questions-list">
+                        <p class="question">購票前準備攻略</p>
+                        <p class="question">台灣虎航商品有哪些?</p>
+                        <p class="question">我可以買沒日期限制的機票嗎?</p>
+                        <p class="question">我可以買不同進出點的機票嗎?</p>
+                        <p class="question">我可以單獨買兒童機票嗎?</p>
+                        <p class="question">如果我的小孩在旅途中會滿兩歲, 該怎麼購票?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cols col-lg-4 col-sm-12">
+                <div class="card">
+                    <h3 class="card-title">訂單付款</h3>
+                    <div class="questions-list">
+                        <p class="question">信用卡付款</p>
+                        <p class="question">兌換券付款</p>
+                        <p class="question">超商現金付款</p>
+                        <p class="question">付款失敗</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cols col-lg-4 col-sm-12">
+                <div class="card">
+                    <h3 class="card-title">訂單確認</h3>
+                    <div class="questions-list">
+                        <p class="question">行程確認單查詢/發送</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cols col-lg-4 col-sm-12">
+                <div class="card">
+                    <h3 class="card-title">訂單變更</h3>
+                    <div class="questions-list">
+                        <p class="question">更改航班內容</p>
+                        <p class="question">更改旅客姓名</p>
+                        <p class="question">更改餐食/行李/座位</p>
+                        <p class="question">取消訂單</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cols col-lg-4 col-sm-12">
+                <div class="card">
+                    <h3 class="card-title">行李資訊</h3>
+                    <div class="questions-list">
+                        <p class="question">手提行李規定</p>
+                        <p class="question">託運行李規定</p>
+                        <p class="question">登機物品注意事項</p>
+                        <p class="question">特殊託運注意事項</p>
+                        <p class="question">行李遺失/損壞/延遲</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cols col-lg-4 col-sm-12">
+                <div class="card">
+                    <h3 class="card-title">特殊需求</h3>
+                    <div class="questions-list">
+                        <p class="question">與嬰幼兒(0-2歲)同行</p>
+                        <p class="question">與兒童(2-12歲)同行</p>
+                        <p class="question">青少年(12-18歲)旅客</p>
+                        <p class="question">懷孕旅客</p>
+                        <p class="question">攜帶醫療設備上機</p>
+                        <p class="question">行動不便旅客</p>
+                        <p class="question">需要額外機位旅客</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cols col-lg-4 col-sm-12">
+                <div class="card">
+                    <h3 class="card-title">航班狀態</h3>
+                    <div class="questions-list">
+                        <p class="question">如何查詢航班動態資訊</p>
+                        <p class="question">航班若有異動會如何通知</p>
+                        <p class="question">是否會提供航班異動證明</p>
+                        <p class="question">如果航班異動時, 我能得到甚麼協助?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cols col-lg-4 col-sm-12">
+                <div class="card">
+                    <h3 class="card-title">自助服務項目</h3>
+                    <div class="questions-list">
+                        <p class="question">Tigerclub相關</p>
+                        <p class="question">特殊需求申請</p>
+                        <p class="question">更改機票旅客姓名</p>
+                        <p class="question">特殊行李(不包含樂器)</p>
+                        <p class="question">證明申請</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="bg-bottom"></div>
+</body>
+
+</html>
